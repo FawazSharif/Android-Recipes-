@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons2"
+                android:layout_width="match_parent"
+                android:layout_height="732dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white">
+
+
+                <TextView
+                    android:id="@+id/Items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_my"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="ITEMS:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ingredients1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/Items" />
+
+                <TextView
+                    android:id="@+id/ingredients2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients1" />
+
+                <TextView
+                    android:id="@+id/ingredients3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients2" />
+
+                <TextView
+                    android:id="@+id/ingredients4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients3" />
+
+                <TextView
+                    android:id="@+id/ingredients5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients4" />
+
+                <TextView
+                    android:id="@+id/ingredients6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients5" />
+
+                <TextView
+                    android:id="@+id/ingredients7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients6" />
+
+                <TextView
+                    android:id="@+id/ingredients8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients7" />
+
+                <TextView
+                    android:id="@+id/ingredients9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients8" />
+
+                <TextView
+                    android:id="@+id/ingredients10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients9" />
+
+                <TextView
+                    android:id="@+id/ingredients11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients10" />
+
+                <TextView
+                    android:id="@+id/ingredients12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients11" />
+
+                <TextView
+                    android:id="@+id/ingredients13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients12" />
+
+                <TextView
+                    android:id="@+id/ingredients14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients13" />
+
+                <TextView
+                    android:id="@+id/ingredients15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients14" />
+
+                <TextView
+                    android:id="@+id/ingredients16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients15" />
+
+                <TextView
+                    android:id="@+id/ingredients17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients16" />
+
+                <TextView
+                    android:id="@+id/ingredients18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients17" />
+
+                <TextView
+                    android:id="@+id/ingredients19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients18" />
+
+                <TextView
+                    android:id="@+id/ingredients20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients19" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

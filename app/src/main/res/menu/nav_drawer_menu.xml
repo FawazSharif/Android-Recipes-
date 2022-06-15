@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/latestRecipes"
+        android:icon="@drawable/ic_allrecipes"
+        android:title="Latest Recipes"/>
+
+    <item
+        android:id="@+id/Favourites"
+        android:icon="@drawable/ic_fav"
+        android:title="Favourites"/>
+
+    <item
+        android:id="@+id/Categories"
+        android:icon="@drawable/ic_cat"
+        android:title="Categories"/>
+
+    <item
+        android:id="@+id/RecipeSearch"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Recipes Search"/>
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/profile"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/ShoppingList"
+        android:icon="@drawable/ic_shop"
+        android:title="Shopping List"/>
+
+    <item
+        android:id="@+id/SearchByIngredients"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Ingredients Search" />
+
+</menu>

@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/recipeImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:foreground="?selectableItemBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/food_image"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mealName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:elevation="100dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:maxWidth="240dp"
+                            android:padding="5dp"
+                            android:shadowColor="#000000"
+                            android:text="null"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:background="@android:color/white">
+
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_cat"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@android:drawable/ic_menu_mylocation"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="80dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/favicon"
+                    app:backgroundTint="#CFCDCD"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.128" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/shareButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shareicon"
+                    app:backgroundTint="#CFCDCD"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white">
+
+
+                <TextView
+                    android:id="@+id/measurementName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_my"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_horizontal"
+                    android:paddingRight="10dp"
+                    android:text="MEASUREMENTS:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/measurement1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/measurementName" />
+
+                <TextView
+                    android:id="@+id/measurement2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement1" />
+
+
+                <TextView
+                    android:id="@+id/measurement3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ingredients3"
+                    app:layout_constraintTop_toTopOf="@id/measurement2" />
+
+                <TextView
+                    android:id="@+id/measurement4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement3" />
+
+
+                <TextView
+                    android:id="@+id/measurement5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintTop_toTopOf="@id/measurement4" />
+
+                <TextView
+                    android:id="@+id/measurement6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement5" />
+
+                <TextView
+                    android:id="@+id/measurement7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintTop_toTopOf="@id/measurement6" />
+
+                <TextView
+                    android:id="@+id/measurement8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintTop_toTopOf="@id/measurement7" />
+
+                <TextView
+                    android:id="@+id/measurement9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.508"
+                    app:layout_constraintTop_toTopOf="@id/measurement8" />
+
+                <TextView
+                    android:id="@+id/measurement10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintTop_toTopOf="@id/measurement9" />
+
+                <TextView
+                    android:id="@+id/measurement11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintTop_toTopOf="@id/measurement10" />
+
+                <TextView
+                    android:id="@+id/measurement12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintTop_toTopOf="@id/measurement11" />
+
+                <TextView
+                    android:id="@+id/measurement13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintTop_toTopOf="@id/measurement12" />
+
+                <TextView
+                    android:id="@+id/measurement14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement13" />
+
+                <TextView
+                    android:id="@+id/measurement15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement14" />
+
+                <TextView
+                    android:id="@+id/measurement16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintTop_toTopOf="@id/measurement15" />
+
+                <TextView
+                    android:id="@+id/measurement17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement16" />
+
+                <TextView
+                    android:id="@+id/measurement18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/ingredients18"
+                    app:layout_constraintTop_toTopOf="@id/measurement17" />
+
+                <TextView
+                    android:id="@+id/measurement19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintTop_toTopOf="@id/measurement18" />
+
+                <TextView
+                    android:id="@+id/measurement20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/measurement19" />
+
+                <TextView
+                    android:id="@+id/ingredientsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableLeft="@drawable/ic_my"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="INGREDIENTS:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/ingredients1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ingredientsName" />
+
+                <CheckBox
+                    android:id="@+id/ingredients2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients1" />
+
+                <CheckBox
+                    android:id="@+id/ingredients3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients2" />
+
+                <CheckBox
+                    android:id="@+id/ingredients4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients3" />
+
+                <CheckBox
+                    android:id="@+id/ingredients5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients4" />
+
+                <CheckBox
+                    android:id="@+id/ingredients6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients5" />
+
+                <CheckBox
+                    android:id="@+id/ingredients7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients6" />
+
+                <CheckBox
+                    android:id="@+id/ingredients8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients7" />
+
+                <CheckBox
+                    android:id="@+id/ingredients9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients8" />
+
+                <CheckBox
+                    android:id="@+id/ingredients10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients9" />
+
+                <CheckBox
+                    android:id="@+id/ingredients11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients10" />
+
+                <CheckBox
+                    android:id="@+id/ingredients12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients11" />
+
+                <CheckBox
+                    android:id="@+id/ingredients13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients12" />
+
+                <CheckBox
+                    android:id="@+id/ingredients14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients13" />
+
+                <CheckBox
+                    android:id="@+id/ingredients15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients14" />
+
+                <CheckBox
+                    android:id="@+id/ingredients16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients15" />
+
+                <CheckBox
+                    android:id="@+id/ingredients17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients16" />
+
+                <CheckBox
+                    android:id="@+id/ingredients18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients17" />
+
+                <CheckBox
+                    android:id="@+id/ingredients19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients18" />
+
+                <CheckBox
+                    android:id="@+id/ingredients20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="70dp"
+                    android:text="N/A"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ingredients19" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/saveIngredientsBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/saveicon2"
+                    app:backgroundTint="#CFCDCD"
+                    app:fabSize="mini"
+                    app:layout_constraintEnd_toStartOf="@+id/measurementName"
+                    app:layout_constraintStart_toEndOf="@+id/ingredientsName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_save"
+                    app:layout_constraintVertical_bias="0.128" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/instructionsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_my"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:paddingRight="15dp"
+                android:text="INSTRUCTIONS:"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                 />
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="15dp"
+                android:text="Description"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="60dp"
+                android:background="@android:color/white">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/source"
+                    app:backgroundTint="#CFCDCD"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#FFFFFF"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/youtube"
+                    app:backgroundTint="#CFCDCD"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

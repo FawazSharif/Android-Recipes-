@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "24322977614",
+    "firebase_url": "https://recipe-52d58.firebaseio.com",
+    "project_id": "recipe-52d58",
+    "storage_bucket": "recipe-52d58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24322977614:android:f996b57c71fe772f9d381f",
+        "android_client_info": {
+          "package_name": "com.fawaz2.recipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24322977614-vdgfp3dl0jqee9g378su44kea0bof2iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5e2mWd9mGr95iwAET4HvpSZrMGjL0ruI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24322977614-vdgfp3dl0jqee9g378su44kea0bof2iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
